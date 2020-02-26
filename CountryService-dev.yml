@@ -1,0 +1,26 @@
+security:
+  jwt:
+    public-key: classpath:public.txt
+    
+spring:  
+  data:
+    mongodb:
+#      uri: mongodb+srv://Wule:wule1234@development-crzam.mongodb.net/test?retryWrites=true&w=majority
+      uri: mongodb://Wule:wule1234@ds223738.mlab.com:23738/CloudFoundry_ujda47f3_9u419q0g?retryWrites=false   
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always  
+        
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://wule-eureka-server-application.cfapps.io/eureka/
