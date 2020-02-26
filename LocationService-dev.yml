@@ -1,0 +1,23 @@
+spring:  
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true   
+
+security:
+  jwt:
+    public-key: classpath:public.txt
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always  
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://wule-eureka-server-application.cfapps.io/eureka/
+      
