@@ -1,0 +1,10 @@
+security:
+  jwt:
+    key-store: classpath:keystore.jks
+    key-store-password: letmein
+    key-pair-alias: mytestkey
+    key-pair-password: changeme
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://wule-eureka-server-application.cfapps.io/eureka/
